@@ -50,7 +50,7 @@ npm install
 3. **Execute o servidor de desenvolvimento**
 
 ```bash
-npm run dev
+npm start
 ```
 
 O projeto estará disponível em `http://localhost:3000`
