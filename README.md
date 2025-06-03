@@ -37,7 +37,7 @@ src/
 1. **Clone o repositório**
 
 ```bash
-git clone https://github.com/elvizaguirre/evolucional-front-test.git
+git clone https://github.com/elvizaguirre/evolucional.git
 cd evolucional-front-test
 ```
 
