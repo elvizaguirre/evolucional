@@ -4,6 +4,7 @@ import { Column } from 'primereact/column';
 import { Button } from 'primereact/button';
 import { useDataContext } from '../context/DataContext';
 import { Student } from '../types';
+import { FaEdit, FaTrash } from 'react-icons/fa';
 
 interface Props {
     alunos: Student[];
@@ -25,7 +26,7 @@ const AlunoTable: React.FC<Props> = ({ alunos, onEdit, onDelete }) => {
     const actionTemplate = (rowData: Student) => (
         <>
             <Button
-                icon="pi pi-pencil"
+                icon={<FaEdit />}
                 className="p-button-rounded p-button-text"
                 onClick={() => onEdit(rowData)}
                 tooltip="Editar Aluno"
@@ -34,7 +35,7 @@ const AlunoTable: React.FC<Props> = ({ alunos, onEdit, onDelete }) => {
                 tooltipOptions={{ position: 'top' }}
             />
             <Button
-                icon="pi pi-trash"
+                icon={<FaTrash />}
                 className="p-button-rounded p-button-text p-button-danger"
                 onClick={() => onDelete(rowData)}
                 tooltip="Excluir Aluno"

@@ -6,6 +6,7 @@ import { Button } from 'primereact/button';
 import { Dialog } from 'primereact/dialog';
 import styled from 'styled-components';
 import { Relationship } from '../types';
+import { FaTrash } from 'react-icons/fa';
 
 const FormWrapper = styled.div`
   display: flex;
@@ -168,7 +169,7 @@ const NovoRelacionamentoForm: React.FC<Props> = ({ onClose, relationshipToEdit, 
 
                 {degreeClasses.map((dc, index) => (
                     <DegreeBlock key={index}>
-                        <RemoveSerieButton icon="pi pi-trash" className="p-button-danger" onClick={() => handleRemoveDegree(index)} />
+                        <RemoveSerieButton icon={<FaTrash />} className="p-button-danger" onClick={() => handleRemoveDegree(index)} />
                         <DegreeGrid>
                             <Campo>
                                 <label>Série</label>

@@ -61,6 +61,10 @@ const Alunos: React.FC = () => {
                 style: { fontSize: '11px' }
             }
         },
+        yaxis: {
+            title: { text: 'Cantidad de Alunos' },
+            labels: { formatter: (val: number) => `${val} alunos` }
+        },
         tooltip: {
             y: {
                 formatter: (val: number) => `${val} alunos`

@@ -78,7 +78,7 @@ describe('Professores', () => {
   it('deve limpar os filtros ao clicar em "Limpar Filtros"', () => {
     renderPage();
 
-    const clearButton = screen.getAllByRole('button').filter(btn => btn.getAttribute('name') === 'limpar filtros');
+    const clearButton = screen.getAllByRole('button').filter(btn => btn.getAttribute('name') === 'Limpar');
     expect(clearButton[0]).toBeInTheDocument();
     fireEvent.click(clearButton[0]);
 

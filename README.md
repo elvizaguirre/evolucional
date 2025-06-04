@@ -78,11 +78,25 @@ npm run test -- --coverage
 - ✅ Tela 1 com listagem, filtros, edição, remoção e geração de alunos
 - ✅ Tela 2 com relacionamentos entre professores, matérias, séries e classes
 - ✅ Utilização de componentes visuais do PrimeReact
-- ✅ Context API com simulação de API
 - ✅ Testes completos dos principais fluxos
 - ✅ Código limpo, responsivo e com boas práticas
 
 ---
+
+## 📈 Recomendações de Melhoria
+
+1. **Integração com API remota**
+- Em vez de consumir arquivos JSON estáticos, criar um serviço HTTP (usando Axios ou Fetch) que aponte para endpoints reais.
+- Centralizar chamadas em um módulo de api ou service e usar variáveis de ambiente (.env) para configurar a URL base.
+
+2. **Manejo de estados de carregamento e erros**
+- Adicionar indicadores de “loading” sempre que iniciar uma requisição (por exemplo, spinners do PrimeReact ou componentes próprios), desabilitando botões enquanto a operação está em curso.
+- Exibir notificações de sucesso ou falha (usando o <Toast> do PrimeReact ou equivalente) após criar, atualizar ou excluir registros.
+- Manter, no contexto, flags como loading, error e success para cada entidade (students, relationships, etc.), permitindo mostrar banners ou mensagens específicas em toda a aplicação.
+
+3. **Tratamento de erros em requisições**
+- Configurar interceptores (caso use Axios) para capturar códigos de status 4xx/5xx e exibir mensagens padronizadas de erro.
+- Fornecer botões de “Recarregar” ou “Tentar novamente” sempre que uma chamada falhar, em vez de deixar o usuário preso em uma tela sem resposta.
 
 ## 📄 Licença
 
