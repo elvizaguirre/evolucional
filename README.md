@@ -37,7 +37,7 @@ src/
 1. **Clone o repositório**
 
 ```bash
-git clone https://github.com/elvizaguirre/evolucional-front-test.git
+git clone https://github.com/elvizaguirre/evolucional.git
 cd evolucional-front-test
 ```
 
@@ -50,7 +50,7 @@ npm install
 3. **Execute o servidor de desenvolvimento**
 
 ```bash
-npm run dev
+npm start
 ```
 
 O projeto estará disponível em `http://localhost:3000`
